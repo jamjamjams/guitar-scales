@@ -1,17 +1,31 @@
-.Navbar{
+.navbar{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    background-color: teal;
 }
 
+@media (max-width: 499px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 1rem;
+    }
+
+  }
+
+@media (min-width: 500px) {
+    .navbar{
+        flex-direction: row;
+        justify-content: right;
+        padding: 2rem;
+    }
+    .navbar-item{
+        margin-left: 1rem;
+    }
+}
 .navbar-item{
     color: black;
-    font-size: 20px;
     font-weight: bold;
-    margin: 0 10px;
     cursor: pointer;
-    text-decoration: none;    
 }
 
 .navbar-item a:hover{

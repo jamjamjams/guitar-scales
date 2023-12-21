@@ -1,14 +1,19 @@
+import Link from 'next/link';
+
 import './Navbar.css';
 
 import siteMap from '../../../../siteMap';
+import next from 'next';
 
 function Navbar() {
   return (
-    <div className="Navbar">
+    <div className="navbar">
         { siteMap.pages.map((page, index) => {
                 return (
-                    <div className="navbar-item" key={index}>
-                        <a href = {page.page}>{page.page}</a>
+                    <div className="navbar-container">
+                      <div className="navbar-item" key={index}>
+                          <Link href={page.route}>{page.page}</Link>
+                      </div>
                     </div>
                 )
             })

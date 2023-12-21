@@ -1,4 +1,14 @@
-// `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
-export default function Page() {
-    return <h1>Hello, Scales Page!</h1>
-  }
+import Navbar from '../components/Navbar/Navbar'
+
+export default function Scales() {
+  return (
+    <main className="">
+      <Navbar />
+      <div>
+        <p className="">
+            This is the scales page
+        </p>
+      </div>
+    </main>
+  )
+}
